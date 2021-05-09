@@ -8,6 +8,6 @@ To get started with TDD, see the `README.md` file in your
 
 class Acronym
   def self.abbreviate(arg)
-    arg.split(" ").map {|word| word[0].upcase}.join("")
+    arg.gsub(/\W/,' ').split(' ').map {|word| word[0].upcase}.join("")
   end
 end
